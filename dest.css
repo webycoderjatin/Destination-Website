@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #ff9f43;
+}
+
+.orange {
+    color: var(--orange) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-image: url("./assets/images/dest-hero.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#hero h1 {
+    position: relative;
+    font-size: 70px;
+    color: white;
+    z-index: 2;
+}
+
+#hero p {
+    position: relative;
+    color: var(--orange);
+    font-weight: 600;
+    z-index: 2;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#hero .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    height: 100%;
+    width: 50%;
+}
+
+#hero .search {
+    position: relative;
+    z-index: 2;
+}
+
+#hero .search .searchI {
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#hero .search label {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+#hero .search input {
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: white;
+    width: 300px;
+}
+
+#hero .search i {
+    background-color: var(--orange);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#hero .search i:hover {
+    background-color: white;
+    color: var(--orange);
+}
+
+
+#hero nav {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.61);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    z-index: 2;
+}
+
+#hero nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.active {
+    color: var(--orange);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+#filters {
+    position: absolute;
+    left: 100px;
+    height: 500px;
+    width: 200px;
+    margin: 100px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #e7e7e7;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.26);
+    transition: 0.5s;
+    
+}
+
+#filters h3 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#filters .destination,
+#filters .date {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #ececec;
+    border-radius: 100px;
+}
+
+#filters .date {
+    margin-top: 20px;
+}
+
+#filters .date p {
+    font-size: 13px;
+}
+
+#filters .dest-select {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+}
+
+#filters .dest-select span,
+#filters .pop-select span,
+#filters .rate-select span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 13px;
+}
+
+#filters .pop-select span,
+#filters .rate-select span {
+    margin-top: 5px;
+}
+
+#filters h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#filters .toggle {
+    display: none;
+    transition: 0.5s;
+}
+
+#filters hr {
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #e7e7e7;
+}
+
+#filters .popular {
+    margin-top: 20px;
+}
+
+#cards {
+    display: grid;
+    grid-template-rows: repeat(3, 250px);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 100px 100px 100px 350px;
+    gap: 20px;
+}
+
+#cards .bx {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: white;
+    width: 100%;
+
+}
+
+#cards .bx img {
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#cards .bx .content {
+    padding: 0px 10px;
+}
+
+
+
+#cards .bx .content h2,
+#cards .bx .content h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+}
+
+#cards .bx .content h4 span {
+    color: #8e8e8e;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+#cards .bx .loc,
+#cards .bx .rating {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #8e8e8e;
+}
+
+
+#cta {
+    height: auto;
+    width: auto;
+    margin: 0px 100px;
+    background-color: rgba(255, 94, 0, 0.03);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#cta input {
+    background: transparent;
+    border: 2px solid var(--orange);
+    font-size: 14px;
+    padding: 10px;
+    width: 400px;
+    outline: none;
+}
+
+#cta button {
+    padding: 3px 15px;
+    border: 2px solid var(--orange);
+    color: white;
+    background-color: var(--orange);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#cta .input input::placeholder {
+    color: var(--orange) !important;
+    font-family: 'Lato', sans-serif;
+}
+
+#cta button:hover {
+    transform: scale(1.1);
+}
+
+#cta .input {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid var(--orange);
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+    #hero {
+        flex-direction: column;
+    }
+
+    #hero .txt {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    #hero .search {
+        width: 100%;
+    }
+
+    #hero .search input {
+        width: calc(100% - 44px);
+    }
+
+    #filters {
+        left: 50px;
+    }
+
+    #cards {
+        margin: 100px 100px 100px 300px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #cta p {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+
+    #filters {
+        left: -190px;
+    }
+
+    #filters .toggle {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 98%;
+        background-color: var(--orange);
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    #cards {
+        width: auto;
+        margin: 100px 10px 100px 20px;
+        gap: 5px;
+    }
+
+    #cards .bx{
+        width: 180px;
+    }
+        #cards .bx img{
+            width: 100%;
+            height: 130px;
+        }
+
+    #cta{
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    #hero h1{
+        font-size: 50px;
+    }
+    #hero p{
+        font-size: 15px;
+    }
+
+    #hero .search label{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:375px){
+    #cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #cards .bx{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #cta .input input{
+        width: 70%;
+    }
+}

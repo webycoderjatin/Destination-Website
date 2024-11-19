@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations</title>
+    <link rel="stylesheet" href="dest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section id="hero">
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="destinations.html">
+                    <li class="active">Destinations</li>
+                </a>
+                <a href="blog.html">
+                    <li>Blog</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="txt">
+            <h1>Destinations</h1>
+            <p>Discover the beauty and excitement of these amazing places around the world.</p>
+        </div>
+
+        <div class="search">
+            <label for="">Find your Destination</label>
+            <div class="searchI">
+                <input type="text" placeholder="Location , Address or Destination">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="filters">
+        <div class="toggle" onclick="toggle()"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3 class="orange">Filters</h3>
+        <div class="destination">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>France</p>
+        </div>
+        <div class="dest-select">
+            <span>
+                <label for="one">France</label>
+                <input type="radio" id="one" name="dest" checked>
+            </span>
+            <span>
+                <label for="two">England</label>
+                <input type="radio" id="two" name="dest">
+            </span>
+            <span>
+                <label for="three">Germany</label>
+                <input type="radio" id="three" name="dest">
+            </span>
+        </div>
+
+        <div class="date">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>22-24 June 2024</p>
+        </div>
+
+        <hr> 
+
+        <div class="popular">
+            <h3 class="orange">Popular Filters</h3>
+
+            <div class="pop-select">
+                 <span>
+                <label for="one">Free Ticket</label>
+                <input type="radio" id="one" name="pop" checked>
+            </span>
+            <span>
+                <label for="two">Short Walk(<250m)</label>
+                <input type="radio" id="two" name="pop">
+            </span>
+            <span>
+                <label for="three">Ample Parking</label>
+                <input type="radio" id="three" name="pop">
+            </span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="rating">
+            <h3 class="orange">Star Ratings</h3>
+            <div class="rate-select">
+                <span>
+                <label for="one">5 Star</label>
+                <input type="radio" id="one" name="rate" checked>
+            </span>
+            <span>
+                <label for="two">4 Star</label>
+                <input type="radio" id="two" name="rate">
+            </span>
+            <span>
+                <label for="three">3 Star</label>
+                <input type="radio" id="three" name="rate">
+            </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="cards">
+        <div class="bx">
+            <img src="assets/images/card1.jpg" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Bali</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+        <div class="bx">
+            <img src="assets/images/card2.jpg" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Singapore</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+        <div class="bx">
+            <img src="assets/images/card2.png" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Lucerne</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+        <div class="bx">
+            <img src="assets/images/card3.png" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Bali</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+        <div class="bx">
+            <img src="assets/images/card1.jpg" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Bali</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+        <div class="bx">
+            <img src="assets/images/card2.png" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Bali</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+        <div class="bx">
+            <img src="assets/images/card2.jpg" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Bali</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+        <div class="bx">
+            <img src="assets/images/card3.png" alt="" height="150px" width="100%">
+            <div class="content">
+                <h2 class="orange">Bali</h2>
+            <span class="loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>7504 Paris , France</p>
+            </span>
+            <span class="rating">
+                <i class="fa-regular fa-star"></i>
+                <p>4.9 (350 Reviews)</p>
+            </span>
+            <h4 class="orange">
+                $389 <span>/Person</span>
+            </h4>
+            </div>
+        </div>
+
+
+    </section>
+
+        <section id="cta">
+        <h1 class="orange">Stay Updated</h1>
+        <p>Subscribe to our newsletter to get the latest travel tips and destination guides.</p>
+        <div class="input">
+            <input type="text" placeholder="Type Email Address here...">
+            <button>SUBSCRIBE</button>
+        </div>
+    </section>
+
+    <footer>
+        <hr width="10%">
+        <p>
+            © 2024 Travel Destinations Showcase. All rights reserved.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
